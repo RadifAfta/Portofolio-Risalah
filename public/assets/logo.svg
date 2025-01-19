@@ -20,6 +20,7 @@
        M96 96 L96 96 
        Q96 64, 128 64 
        Z" 
-    fill="url(#gradientR)" 
+    fill="url(#gradientR)"
+    stroke="none"
   />
 </svg>

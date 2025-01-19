@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Mail, Anchor, Ship, Heart, ChevronRight, Download, Settings, BookOpen, ExternalLink, Computer, BarChart2, ChevronDown, ArrowRight, Github, Linkedin, Instagram, Brain, Code, Rocket, Stars, Trophy, Target, Phone, MapPin, Send } from 'lucide-react';
+import { Menu, X, Mail, Anchor, Ship, Heart, ChevronRight, Download, Settings, BookOpen, ExternalLink, ChevronDown, ArrowRight, Github, Linkedin, Instagram, Brain, Code, Rocket, Stars, Trophy, Target, Phone, MapPin, Send, Ruler, Calculator, Database, Book } from 'lucide-react';
 
 const Portfolio = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -51,14 +51,19 @@ const Portfolio = () => {
 
     const highlights = [
         {
-            icon: <Anchor className="w-6 h-6" />,
-            title: "Ship Design Specialist",
-            description: "Expert in modern naval architecture and marine engineering"
+            icon: <Ship className="w-6 h-6" />,
+            title: "Desain Kapal",
+            description: "Berpengalaman dalam perancangan kapal menggunakan software CAD/CAM modern dengan fokus pada efisiensi dan inovasi."
         },
         {
-            icon: <Settings className="w-6 h-6" />,
-            title: "Hydrodynamics Expert",
-            description: "Specialized in computational fluid dynamics and vessel optimization"
+            icon: <Calculator className="w-6 h-6" />,
+            title: "Analisis Struktur & Hidrodinamika",
+            description: "Ahli dalam perhitungan kekuatan struktur kapal, stabilitas, dan analisis hidrodinamika menggunakan metode numerik."
+        },
+        {
+            icon: <Anchor className="w-6 h-6" />,
+            title: "Konstruksi Kapal",
+            description: "Memahami metode konstruksi kapal modern, material, dan regulasi internasional untuk pembangunan kapal yang efektif."
         }
     ];
 
@@ -148,10 +153,25 @@ const Portfolio = () => {
                     <div className="relative flex items-center justify-between h-20">
                         {/* Logo Section */}
                         <div className="flex items-center">
-                            <div className="flex items-center space-x-3 bg-sky-100/50 backdrop-blur-md rounded-full px-4 py-2 border border-sky-200/50 hover:bg-sky-100/70 transition-all duration-300">
-                                <Ship className="h-6 w-6 text-sky-600" />
-                                <span className="font-bold text-sky-800 text-lg">Risalah</span>
-                                <span className="text-sky-600 text-sm">Portfolio</span>
+                            <div className="relative group">
+                                {/* Gradient background with animation */}
+                                <div className="absolute -inset-0.5 bg-gradient-to-r from-sky-600 via-blue-500 to-indigo-500 rounded-full opacity-30 group-hover:opacity-50 blur-sm transition duration-500"></div>
+
+                                {/* Main container */}
+                                <div className="relative flex items-center space-x-2 bg-white/90 backdrop-blur-md rounded-full px-6 py-2.5 border border-sky-100 group-hover:bg-white/95 transition-all duration-300">
+                                    {/* RISALAH text with multi-color gradient */}
+                                    <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-sky-600 via-blue-600 to-indigo-600 text-xl tracking-wide group-hover:bg-gradient-to-r group-hover:from-sky-500 group-hover:via-blue-500 group-hover:to-indigo-500 transition-all duration-300">
+                                        RISALAH
+                                    </span>
+
+                                    {/* Divider with gradient */}
+                                    <div className="w-px h-4 bg-gradient-to-b from-sky-200 to-blue-200"></div>
+
+                                    {/* Portfolio text with subtle gradient */}
+                                    <span className="text-sm font-medium tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-blue-500">
+                                        PORTFOLIO
+                                    </span>
+                                </div>
                             </div>
                         </div>
 
@@ -225,7 +245,7 @@ const Portfolio = () => {
                             </h1>
 
                             <p className="text-xl text-sky-800 max-w-2xl">
-                                Ahli desain dan rekayasa kapal dengan keahlian mendalam dalam hidrodinamika dan konstruksi maritim, menghadirkan inovasi di dunia maritim.
+                                Ahli di desain dan konstruksi kapal dengan keahlian hidrostatis, hidrodinamik, dan software CAD/CAM untuk menciptakan desain kapal yang efisien dan inovatif.
                             </p>
                         </div>
 
@@ -289,6 +309,17 @@ const Portfolio = () => {
                 <div className="absolute inset-0 bg-[radial-gradient(#60a5fa_1px,transparent_1px)] [background-size:16px_16px] opacity-10"></div>
 
                 <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    {/* Centered Title */}
+                    <div className="text-center mb-16 space-y-4">
+                        <div className="inline-flex items-center space-x-2 bg-sky-100/50 rounded-full px-4 py-2">
+                            <span className="w-2 h-2 bg-sky-500 rounded-full animate-pulse"></span>
+                            <span className="text-sky-700 font-medium">Tentang Saya</span>
+                        </div>
+                        <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-sky-600 to-blue-600">
+                            Perjalanan dalam Dunia Teknik Perkapalan
+                        </h2>
+                    </div>
+
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
                         {/* Image Section */}
                         <div className="relative group">
@@ -297,19 +328,19 @@ const Portfolio = () => {
 
                             {/* Main Image Container */}
                             <div className="relative">
-                                {/* Main Profile Image */}
+                                {/* Profile Image */}
                                 <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl transform transition-transform duration-300 group-hover:scale-[1.02]">
                                     <img
                                         src="/assets/hero.jpg"
-                                        alt="Risalah Alifatus Zharo"
+                                        alt="Your Name"
                                         className="w-full h-[600px] object-cover object-center"
                                     />
 
-                                    {/* Overlay Gradient */}
+                                    {/* Gradient Overlay */}
                                     <div className="absolute inset-0 bg-gradient-to-t from-sky-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                 </div>
 
-                                {/* Floating Stats Cards */}
+                                {/* Award Badge */}
                                 <div className="absolute -right-8 top-1/3 z-20">
                                     <div className="bg-white p-4 rounded-2xl shadow-xl border border-sky-100">
                                         <div className="flex items-center space-x-3">
@@ -317,8 +348,8 @@ const Portfolio = () => {
                                                 <Trophy className="w-6 h-6 text-sky-600" />
                                             </div>
                                             <div>
-                                                <p className="text-sky-900 font-bold text-lg">5+ Awards</p>
-                                                <p className="text-sky-600 text-sm">In Naval Design</p>
+                                                <p className="text-sky-900 font-bold text-lg">5+ Penghargaan</p>
+                                                <p className="text-sky-600 text-sm">Dalam Desain Kapal</p>
                                             </div>
                                         </div>
                                     </div>
@@ -332,8 +363,8 @@ const Portfolio = () => {
                                                 <Target className="w-6 h-6 text-sky-600" />
                                             </div>
                                             <div>
-                                                <p className="text-sky-900 font-bold text-lg">3+ Years</p>
-                                                <p className="text-sky-600 text-sm">Experience</p>
+                                                <p className="text-sky-900 font-bold text-lg">3+ Tahun</p>
+                                                <p className="text-sky-600 text-sm">Pengalaman</p>
                                             </div>
                                         </div>
                                     </div>
@@ -343,38 +374,36 @@ const Portfolio = () => {
 
                         {/* Content Section */}
                         <div className="space-y-8">
-                            {/* Section Header */}
+                            {/* Description */}
                             <div className="space-y-4">
-                                <div className="inline-flex items-center space-x-2 bg-sky-100/50 rounded-full px-4 py-2">
-                                    <span className="w-2 h-2 bg-sky-500 rounded-full animate-pulse"></span>
-                                    <span className="text-sky-700 font-medium">About Me</span>
-                                </div>
-                                <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-sky-600 to-blue-600">
-                                    Innovative Maritime Engineer
-                                </h2>
                                 <p className="text-sky-600/80 text-lg leading-relaxed">
-                                    Passionate about revolutionizing maritime engineering through innovative design and sustainable solutions. Specializing in advanced ship design and hydrodynamic optimization.
+                                    Saya adalah mahasiswa Teknik Perkapalan dengan minat kuat dalam desain dan konstruksi kapal.
+                                    Memiliki pemahaman mendalam tentang prinsip-prinsip perkapalan seperti hidrostatis dan hidrodinamik.
+                                    Terampil menggunakan software CAD/CAM untuk menciptakan desain kapal yang efisien, inovatif, dan ramah lingkungan.
                                 </p>
                             </div>
 
-                            {/* Highlights Grid */}
-                            <div className="grid gap-6">
+                            {/* Highlights/Features */}
+                            <div className="grid gap-4">
                                 {highlights.map((highlight, index) => (
-                                    <div key={index} className="bg-white p-6 rounded-2xl shadow-lg border border-sky-100 hover:shadow-xl transition-all duration-300">
-                                        <div className="flex items-start space-x-4">
-                                            <div className="p-3 bg-sky-100 rounded-xl">
+                                    <div
+                                        key={index}
+                                        className="bg-white p-4 rounded-xl shadow-sm border border-sky-50 hover:shadow-md transition-all duration-300"
+                                    >
+                                        <div className="flex items-center space-x-4">
+                                            <div className="p-2 bg-sky-50 rounded-lg">
                                                 {React.cloneElement(highlight.icon, { className: "text-sky-600" })}
                                             </div>
                                             <div>
-                                                <h3 className="text-xl font-bold text-sky-900 mb-2">{highlight.title}</h3>
-                                                <p className="text-sky-600">{highlight.description}</p>
+                                                <h3 className="text-lg font-semibold text-sky-900">{highlight.title}</h3>
+                                                <p className="text-sky-600/80 text-sm">{highlight.description}</p>
                                             </div>
                                         </div>
                                     </div>
                                 ))}
                             </div>
 
-                            {/* Stats Grid */}
+                            {/* Statistics */}
                             <div className="grid grid-cols-3 gap-6">
                                 {stats.map((stat, index) => (
                                     <div key={index} className="bg-white p-4 rounded-2xl text-center group hover:bg-sky-50 transition-colors duration-300">
@@ -395,7 +424,7 @@ const Portfolio = () => {
                                     href="#contact"
                                     className="px-6 py-3 bg-sky-600 text-white rounded-full font-semibold hover:bg-sky-700 transition-colors flex items-center space-x-2"
                                 >
-                                    <span>Let's Connect</span>
+                                    <span>Hubungi Saya</span>
                                     <ChevronRight className="w-5 h-5" />
                                 </a>
                                 <a
@@ -403,13 +432,16 @@ const Portfolio = () => {
                                     className="px-6 py-3 border border-sky-600 text-sky-700 rounded-full font-semibold hover:bg-sky-50 transition-colors flex items-center space-x-2"
                                 >
                                     <Download className="w-5 h-5" />
-                                    <span>Download CV</span>
+                                    <span>Unduh CV</span>
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+
+
+
 
             {/* Projects Section*/}
             <section id="projects" className="py-20 bg-gradient-to-b from-sky-50/50 to-white relative overflow-hidden">
@@ -502,7 +534,7 @@ const Portfolio = () => {
                     {/* View All Projects Button */}
                     <div className="mt-16 text-center">
                         <a
-                            href="#"
+                            href="https://drive.google.com/drive/folders/1iaYdFfoi1U7SZzF6GFBKhbh2BlATUPmT?usp=sharing"
                             className="inline-flex items-center space-x-2 px-8 py-4 bg-sky-100 text-sky-600 rounded-full hover:bg-sky-200 transition-colors group"
                         >
                             <span className="font-medium">View All Projects</span>
