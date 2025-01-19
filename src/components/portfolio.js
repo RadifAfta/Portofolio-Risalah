@@ -276,7 +276,7 @@ const Portfolio = () => {
                             {/* Foto profil bulat */}
                             <div className="relative w-96 h-96 rounded-full overflow-hidden border-8 border-sky-200/50 shadow-2xl transform transition-all duration-300 group-hover:scale-105">
                                 <img
-                                    src="/assets/hero-about.jpg"
+                                    src="/assets/hero-hima.jpg"
                                     alt="Risalah Alifatus Zharo"
                                     className="w-full h-full object-cover object-center"
                                 />
@@ -331,7 +331,7 @@ const Portfolio = () => {
                                 {/* Profile Image */}
                                 <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl transform transition-transform duration-300 group-hover:scale-[1.02]">
                                     <img
-                                        src="/assets/hero.jpg"
+                                        src="/assets/hima-hero.jpg"
                                         alt="Your Name"
                                         className="w-full h-[600px] object-cover object-center"
                                     />
